@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>encontro.me — Conexões que geram negócios, oportunidades e crescimento</title>
+  <meta name="description" content="A comunidade de mulheres empreendedoras onde conexões viram negócios. Eventos, escambo, divulgação mútua, diretório e o Mapa das Conexões." />
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a href="#topo" class="brand" aria-label="encontro.me">
+        <span class="brand-symbol" aria-hidden="true">
+          <svg viewBox="0 0 64 48" width="38" height="28">
+            <path d="M2 28 H22 M40 26 a16 16 0 1 0 -3 9.6 M24 26 H56" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-word">encontro<span class="dot">.</span>me</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+        <a href="#vitrine">Benefícios</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#lugares">Lugares</a>
+        <a href="#oportunidades">Oportunidades</a>
+        <a href="#diretorio">Participantes</a>
+        <a href="#mapa">Mapa</a>
+        <a href="#participar" class="btn btn-primary btn-sm nav-cta">Quero fazer parte</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="hero-blob blob-1" aria-hidden="true"></div>
+      <div class="hero-blob blob-2" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <span class="eyebrow eyebrow-light">comunidade · mulheres empreendedoras</span>
+          <h1>Conexões que geram <span class="hl">negócios</span>, oportunidades e crescimento.</h1>
+          <p class="hero-sub">A encontro.me é uma produtora de encontros: reúne mulheres empreendedoras, lugares parceiros e público para venderem juntas. Cada evento vira uma feira viva.</p>
+          <div class="hero-actions">
+            <a href="#participar" class="btn btn-primary">Quero fazer parte</a>
+            <a href="#eventos" class="btn btn-ghost">Próximo evento</a>
+            <a href="#diretorio" class="btn btn-link">Conheça as participantes →</a>
+          </div>
+          <p class="hero-quote">"Quando uma mulher cresce sozinha é uma conquista. Quando cresce em comunidade, o impacto é muito maior."</p>
+        </div>
+        <div class="hero-art reveal" aria-hidden="true">
+          <div class="laco-card">
+            <svg viewBox="0 0 120 90" width="160" height="120" class="laco-big">
+              <path d="M6 52 H40 M74 48 a28 28 0 1 0 -5 17 M44 48 H104" fill="none" stroke="currentColor" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>o laço que une</span>
+          </div>
+          <div class="float-pill pill-a">☕ Café 35 · 10% off</div>
+          <div class="float-pill pill-b">🏠 Invictta · consultoria grátis</div>
+          <div class="float-pill pill-c">🧶 Crochê Lara · frete grátis</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== VITRINE DE BENEFÍCIOS ===================== -->
+    <section class="section" id="vitrine">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow">vitrine das associadas</span>
+          <h2>O que as empreendedoras estão oferecendo este mês</h2>
+          <p class="section-lead">Promoções, benefícios exclusivos, lançamentos e cupons — tudo circulando dentro da comunidade.</p>
+        </header>
+      </div>
+
+      <div class="carousel" id="vitrineCarousel">
+        <div class="carousel-track" id="vitrineTrack">
+          <!-- cards injetados via JS (duplicados para loop infinito) -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EVENTOS ===================== -->
+    <section class="section section-soft" id="eventos">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow">calendário</span>
+          <h2>Próximos eventos da comunidade</h2>
+          <p class="section-lead">Encontros que aproximam, conectam e geram negócios. Confirme sua presença.</p>
+        </header>
+
+        <div class="events-grid" id="eventsGrid"><!-- cards via JS --></div>
+      </div>
+    </section>
+
+    <!-- ===================== LUGARES PARCEIROS ===================== -->
+    <section class="section" id="lugares">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow">lugares parceiros</span>
+          <h2>Onde a comunidade se encontra</h2>
+          <p class="section-lead">Cafés, espaços e coworkings parceiros que recebem nossos eventos. Conheça cada lugar e os benefícios para participantes.</p>
+        </header>
+
+        <div class="places-grid" id="placesGrid"><!-- cards via JS --></div>
+      </div>
+    </section>
+
+    <!-- ===================== FEED ===================== -->
+    <section class="section" id="feed">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow">feed da comunidade</span>
+          <h2>O que está acontecendo agora</h2>
+          <p class="section-lead">Novidades, conquistas, vagas e lançamentos — publicados pelas próprias participantes.</p>
+        </header>
+
+        <div class="feed-wrap">
+          <div class="feed-compose">
+            <div class="avatar avatar-you">+</div>
+            <input type="text" placeholder="Compartilhe uma novidade com a comunidade..." aria-label="Escrever publicação" />
+            <button class="btn btn-primary btn-sm">Publicar</button>
+          </div>
+          <div class="feed-list" id="feedList"><!-- posts via JS --></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== OPORTUNIDADES (Escambo + Divulgação) ===================== -->
+    <section class="section section-deep" id="oportunidades">
+      <div class="container">
+        <header class="section-head section-head-light">
+          <span class="eyebrow eyebrow-light">área de oportunidades</span>
+          <h2>Onde a troca vira crescimento</h2>
+          <p class="section-lead">Duas das áreas mais fortes da comunidade: trocar serviços e amplificar o alcance umas das outras.</p>
+        </header>
+
+        <div class="opp-grid">
+          <!-- Escambo -->
+          <article class="opp-card">
+            <div class="opp-icon">🤝</div>
+            <h3>Escambo Empreendedor</h3>
+            <p>Você cadastra o que <strong>oferece</strong> e o que <strong>procura receber</strong>. A comunidade conecta as trocas.</p>
+            <div class="escambo-demo">
+              <div class="escambo-side offer"><span>Ofereço</span>Sessão fotográfica profissional</div>
+              <div class="escambo-swap" aria-hidden="true">⇄</div>
+              <div class="escambo-side want"><span>Procuro</span>Consultoria financeira</div>
+            </div>
+            <blockquote class="case">
+              "Através do Escambo recebi uma nova identidade visual e ofereci uma sessão fotográfica."
+              <cite>— caso de sucesso real da comunidade</cite>
+            </blockquote>
+            <a href="#participar" class="btn btn-ghost btn-on-deep">Cadastrar minha troca</a>
+          </article>
+
+          <!-- Divulgação mútua -->
+          <article class="opp-card">
+            <div class="opp-icon">📣</div>
+            <h3>Divulgação Mútua</h3>
+            <p><strong>Eu divulgo você, você divulga eu.</strong> Cadastre seu Instagram, serviço e material — o sistema organiza duplas e grupos.</p>
+            <ul class="check-list">
+              <li>Divulgação realizada</li>
+              <li>Alcance gerado e mensurado</li>
+              <li>Prints da publicação registrados</li>
+            </ul>
+            <div class="duo-demo" aria-hidden="true">
+              <span class="duo-chip">@laramoda</span>
+              <span class="duo-link">divulga ⇄ divulga</span>
+              <span class="duo-chip">@crcomunicacao</span>
+            </div>
+            <a href="#participar" class="btn btn-ghost btn-on-deep">Entrar em uma dupla</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DIRETÓRIO ===================== -->
+    <section class="section" id="diretorio">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow">diretório de negócios</span>
+          <h2>Conheça as participantes</h2>
+          <p class="section-lead">O catálogo completo da comunidade. Filtre por categoria e descubra quem está perto de você.</p>
+        </header>
+
+        <div class="filters" id="dirFilters" role="tablist" aria-label="Filtrar por categoria"></div>
+        <div class="dir-grid" id="dirGrid"><!-- cards via JS --></div>
+      </div>
+    </section>
+
+    <!-- ===================== CONEXÕES (Mural + Parcerias) ===================== -->
+    <section class="section section-soft" id="conexoes">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow">conexões</span>
+          <h2>Procuro · Indico · Faço parceria</h2>
+          <p class="section-lead">O mural onde necessidades encontram soluções dentro da própria comunidade.</p>
+        </header>
+
+        <div class="board-grid">
+          <div class="board-col">
+            <h3 class="board-title">📌 Mural de Indicações</h3>
+            <div class="board-card seek">"Procuro designer para criação de catálogo."</div>
+            <div class="board-card give">"Indico a empresa X para embalagens — atendimento impecável."</div>
+            <div class="board-card seek">"Procuro fornecedor de brindes personalizados."</div>
+          </div>
+          <div class="board-col">
+            <h3 class="board-title">🤝 Banco de Parcerias</h3>
+            <div class="board-card partner">"Busco parceiras para kit de Dia das Mães."</div>
+            <div class="board-card partner">"Espaço disponível para co-criação de evento."</div>
+            <div class="board-card partner">"Patrocínio aberto para a próxima Rodada de Negócios."</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== IMPACTO ===================== -->
+    <section class="section" id="impacto">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow">resultados</span>
+          <h2>O impacto da comunidade</h2>
+          <p class="section-lead">Painel atualizado com o que circula entre as participantes.</p>
+        </header>
+
+        <div class="stats-grid" id="statsGrid">
+          <div class="stat-card"><span class="stat-num" data-target="250">0</span><span class="stat-label">empreendedoras cadastradas</span></div>
+          <div class="stat-card"><span class="stat-num" data-target="180">0</span><span class="stat-label">negócios gerados</span></div>
+          <div class="stat-card"><span class="stat-num" data-prefix="R$ " data-target="350" data-suffix=" mil">0</span><span class="stat-label">movimentados em negócios</span></div>
+          <div class="stat-card"><span class="stat-num" data-target="85">0</span><span class="stat-label">escambos realizados</span></div>
+          <div class="stat-card"><span class="stat-num" data-target="120">0</span><span class="stat-label">divulgações mútuas concluídas</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MAPA DAS CONEXÕES (diferencial) ===================== -->
+    <section class="section section-deep" id="mapa">
+      <div class="container">
+        <header class="section-head section-head-light">
+          <span class="eyebrow eyebrow-light">o diferencial</span>
+          <h2>O Mapa das Conexões</h2>
+          <p class="section-lead">Uma rede viva que mostra quem comprou de quem, quem indicou quem e quem fez parceria com quem. O dinheiro e as oportunidades circulando dentro da própria comunidade.</p>
+        </header>
+
+        <svg id="connMap" viewBox="0 0 900 460" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Mapa de conexões entre participantes da comunidade"></svg>
+        <div class="map-legend">
+          <span><i class="dot-buy"></i> contratou / comprou</span>
+          <span><i class="dot-rec"></i> indicou</span>
+          <span><i class="dot-part"></i> fez parceria</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BLOG ===================== -->
+    <section class="section" id="blog">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow">blog encontro.me</span>
+          <h2>Conteúdo para crescer</h2>
+          <p class="section-lead">Empreendedorismo feminino, marketing, vendas, gestão e histórias das participantes.</p>
+        </header>
+
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-thumb thumb-1"><span class="tag">Networking</span></div>
+            <h3>Como transformar um café com amigas em parceria de negócios</h3>
+            <p>O passo a passo das conexões que viram contrato.</p>
+            <a href="#" class="btn btn-link">Ler artigo →</a>
+          </article>
+          <article class="blog-card">
+            <div class="blog-thumb thumb-2"><span class="tag">Vendas</span></div>
+            <h3>Vender em comunidade: por que juntas vendemos mais</h3>
+            <p>Estratégias de venda colaborativa para pequenas marcas.</p>
+            <a href="#" class="btn btn-link">Ler artigo →</a>
+          </article>
+          <article class="blog-card">
+            <div class="blog-thumb thumb-3"><span class="tag">Histórias</span></div>
+            <h3>Da Lara Moda à CR Comunicação: uma história de escambo</h3>
+            <p>Como uma troca virou crescimento para as duas marcas.</p>
+            <a href="#" class="btn btn-link">Ler artigo →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PREMIUM (futura) ===================== -->
+    <section class="section section-soft" id="premium">
+      <div class="container premium-inner">
+        <div class="premium-copy">
+          <span class="eyebrow">área premium · em breve</span>
+          <h2>Para associadas que querem ir além</h2>
+          <p class="section-lead">Uma camada exclusiva de desenvolvimento contínuo para acelerar seu negócio.</p>
+          <ul class="premium-list">
+            <li>🎓 Cursos e mentorias</li>
+            <li>📚 Materiais e gravações de palestras</li>
+            <li>💬 Comunidade exclusiva</li>
+            <li>💼 Rodadas de negócios online</li>
+          </ul>
+        </div>
+        <div class="premium-card">
+          <span class="premium-badge">Premium</span>
+          <h3>Lista de espera aberta</h3>
+          <p>Seja avisada quando a área premium for lançada e garanta condição de fundadora.</p>
+          <a href="#participar" class="btn btn-primary">Entrar na lista</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA FINAL / PARTICIPAR ===================== -->
+    <section class="cta-final" id="participar">
+      <div class="cta-blob" aria-hidden="true"></div>
+      <div class="container cta-inner">
+        <span class="eyebrow eyebrow-light">faça parte</span>
+        <h2>Onde mulheres se <span class="hl-peach">encontram</span> para crescer.</h2>
+        <p>Cadastre-se e comece a transformar conexões em negócios reais.</p>
+        <form class="cta-form" id="ctaForm" novalidate>
+          <input type="text" name="nome" placeholder="Seu nome" aria-label="Seu nome" required />
+          <input type="text" name="empresa" placeholder="Sua empresa / marca" aria-label="Sua empresa" />
+          <input type="email" name="email" placeholder="Seu melhor e-mail" aria-label="Seu e-mail" required />
+          <button type="submit" class="btn btn-peach">Quero fazer parte</button>
+        </form>
+        <p class="cta-note" id="ctaNote" role="status"></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand brand-footer">
+          <span class="brand-symbol" aria-hidden="true">
+            <svg viewBox="0 0 64 48" width="34" height="26"><path d="M2 28 H22 M40 26 a16 16 0 1 0 -3 9.6 M24 26 H56" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="brand-word">encontro<span class="dot">.</span>me</span>
+        </span>
+        <p>uma produtora de encontros · mulheres empreendedoras</p>
+      </div>
+      <nav class="footer-nav" aria-label="Rodapé">
+        <a href="#vitrine">Benefícios</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#oportunidades">Oportunidades</a>
+        <a href="#diretorio">Participantes</a>
+        <a href="#mapa">Mapa das Conexões</a>
+        <a href="#blog">Blog</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 encontro.me — todos os direitos reservados.</span>
+      <span>feito em comunidade 💜</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
